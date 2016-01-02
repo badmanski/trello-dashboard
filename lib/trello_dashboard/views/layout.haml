@@ -1,0 +1,14 @@
+!!!
+%html
+  %head
+    %link{ rel: 'stylesheet',
+           href: 'https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.min.css' }
+    %link{ rel: 'stylesheet',
+           href: '/stylesheets/application.css' }
+  %body
+    = haml :navbar
+    .container
+      = yield
+    %script{ src: 'https://code.jquery.com/jquery-2.1.4.min.js' }
+    %script{ src: 'https://cdnjs.cloudflare.com/ajax/libs/tether/1.1.1/js/tether.min.js' }
+    %script{ src: 'https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.min.js' }
