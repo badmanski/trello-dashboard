@@ -1,1 +1,22 @@
-%h1 Hello world!
+.row
+  .col-md-4
+    %h3 Backlog
+    - @lists['backlog'].each do |list|
+      - list.cards.each do |card|
+        .panel.panel-default
+          .panel-heading= card.name
+          .panel-body= card.desc
+  .col-md-4
+    %h3 Work in progress
+    - @lists['work_in_progress'].each do |list|
+      - list.cards.each do |card|
+        .panel.panel-default
+          .panel-heading= card.name
+          .panel-body= card.desc
+  .col-md-4
+    %h3 Staging
+    - @lists['staging'].each do |list|
+      - list.cards.each do |card|
+        .panel.panel-default
+          .panel-heading= card.name
+          .panel-body= card.desc
